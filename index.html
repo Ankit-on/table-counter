@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Create a clear, printable multiplication table for any whole number."
+    />
+    <title>Table Counter — multiplication made clear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Table Counter home">
+          <span class="brand-mark" aria-hidden="true">×</span>
+          <span>table<span class="brand-light">counter</span></span>
+        </a>
+        <span class="topbar-note"><span class="online-dot"></span> Your daily dose of clarity</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SIMPLE MATH. ZERO FUSS.</p>
+          <h1 id="page-title">Every number<br />has a <span>pattern.</span></h1>
+          <p class="hero-description">
+            Pick a number and watch its multiplication table fall into place.
+            Clear, quick, and ready whenever you are.
+          </p>
+          <div class="hero-footnote">
+            <span class="sparkle" aria-hidden="true">✳</span>
+            A little practice goes a long way.
+          </div>
+        </div>
+
+        <div class="calculator-card">
+          <div class="card-heading">
+            <div>
+              <p class="card-kicker">YOUR WORKSPACE</p>
+              <h2>Build a table</h2>
+            </div>
+            <span class="card-icon" aria-hidden="true">∑</span>
+          </div>
+
+          <form id="table-form" class="number-form">
+            <label for="number-input">Which number are we counting by?</label>
+            <div class="input-row">
+              <div class="number-field">
+                <span class="input-prefix" aria-hidden="true">×</span>
+                <input
+                  id="number-input"
+                  name="number"
+                  type="number"
+                  min="-999999"
+                  max="999999"
+                  step="1"
+                  value="7"
+                  inputmode="numeric"
+                  required
+                />
+              </div>
+              <button class="generate-button" type="submit">
+                <span>Generate</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p class="input-hint">Any whole number from −999,999 to 999,999</p>
+          </form>
+
+          <div class="card-divider"></div>
+
+          <section class="results" aria-labelledby="results-title" aria-live="polite">
+            <div class="results-heading">
+              <div>
+                <p class="card-kicker">YOUR MULTIPLICATION TABLE</p>
+                <h2 id="results-title">The 7 times table</h2>
+              </div>
+              <span class="range-pill">1 — 10</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Calculation</th>
+                    <th scope="col">Answer</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Made for curious minds.</span>
+        <span>One step at a time <span class="footer-star" aria-hidden="true">✳</span></span>
+      </footer>
+    </main>
+  </body>
+</html>
